@@ -1,1 +1,0 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mireyacs/infiniteyield-reborn-reborn/master/source"))()
