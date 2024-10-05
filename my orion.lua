@@ -732,12 +732,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		if WindowConfig.FreeMouse then
 			UnlockMouse(false)
 		end
-		
-		OrionLib:MakeNotification({
-			Name = "Interface Hidden",
-			Content = "Tap "  .. WindowConfig.KeyToOpenWindow .. " to reopen the interface",
-			Time = 3
-		})
 
 		showMobileOpenButton()
 		WindowConfig.CloseCallback()
@@ -760,6 +754,12 @@ function OrionLib:MakeWindow(WindowConfig)
 				if WindowConfig.FreeMouse then
 					UnlockMouse(false)
 				end
+				OrionLib:MakeNotification({
+					Name = "Interface Hidden",
+					Content = "Tap "  .. WindowConfig.KeyToOpenWindow .. " to reopen the interface",
+					Time = 3
+				})
+
 				showMobileOpenButton()
 			end
 		end
